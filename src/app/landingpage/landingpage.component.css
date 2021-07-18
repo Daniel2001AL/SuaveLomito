@@ -1,0 +1,114 @@
+
+/*------------- Hero Image--------------------- */
+.hero-image{
+    height: 70vh;
+    background: url('../../assets/img/landing-page.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4em;
+    color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0%;
+    border-bottom: tomato 10px groove;
+}
+.hero-image h1{
+    color: rgb(255, 32, 32);
+    font-size: 70px;
+    margin: 0px;
+    text-shadow: 1px 2px 5px #000;
+}
+.hero-image p{
+    font-size: 25px;
+}
+
+/* ------------------------------------------ */
+
+
+/* ---------------Card Nosotros------------- */
+.card{
+    margin: 25px;
+    display: flex;
+    background:rgba(2, 187, 243, 0.973);
+    border-radius: 10px;
+    width: 95vw;
+    height: 55vh;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ......Descripcion Nosotros...... */
+.nosotros{
+    padding: 2em;
+    color: rgb(255, 255, 255);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.nosotros h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px 3px rgb(211, 9, 9);
+}
+.nosotros p{
+    font-size: 27px;
+}
+.descripcionNos{
+    margin-top: 2em;
+    margin-left: 0;
+    width: 55%;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+/* .............................. */
+
+/* ........Imagenes Nosotros.......... */
+.imgNos{
+    width: 30%;
+    align-self: flex-end;
+    margin-top: -20%;
+}
+.imgNos img{
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.Us1{
+    height: 17vh;
+    width: 35vh;
+    margin-top: -170px;
+    margin-left: -70px;
+}
+.Us2{
+    height: 17vh;
+    width: 35vh;
+    margin-top: 90px;
+    margin-left: -220px;
+}
+.Us3{
+    height: 25vh;
+    width: 20vh;
+    margin-top: -50px;
+    margin-left: 25px;
+}
+/* ............................ */
+/* -------------------------------------------------- */
+
+.bedrooms{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.economica{
+    width: 60vh;
+    height: 40vh;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+.d-block{
+    width: 60vh;
+    height: 40vh;
+}
+.infoEcono{
+    margin-top: 1em;
+}
+.infoEcono p{
+    font-size: 18px;
+}
