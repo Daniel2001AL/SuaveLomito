@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reserve',
@@ -7,9 +8,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReserveComponent implements OnInit {
 
-  constructor() { }
+  reservaForm: FormGroup;
+  resume = false;
+  tipe = "";
+  costo = "";
+  confirmed = false;
+
+  constructor(private _formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.reservaForm = this._formBuilder.group({
+      name : ['', Validators.required],
+      tipo :['', Validators.required],
+      date : ['', Validators.required],
+      timeE: ['', Validators.required],
+      timeS: ['', Validators.required]
+    })
   }
+  reserva(){
+    this.resume= true;
+    this.confirmed=true;
+    const data = this.reservaForm.value;
+    const x = parseInt(data.tipo)
+    switch(x){
+      case 1:
+        this.tipe = "Dalmata-Inn";
+        this.costo = "$100.00"
+        break;
+      case 2:
+        this.tipe = "Parke"
+        this.costo = "$300.00"
+        break;
+      case 3:
+        this.tipe = "Honk-Kong"
+        this.costo = "$500.00"
+        break;
+    }
+  }
+  
 
 }

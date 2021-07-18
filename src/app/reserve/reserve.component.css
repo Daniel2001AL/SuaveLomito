@@ -1,17 +1,29 @@
+.all{
+    margin: -10px;
+    margin-right: -10px;
+    width: 100.75%;
+    height: 100vh;
+    background:rgb(85, 6, 160);
+    background-size: 30%;
+}
 
 .card{
     margin: 25px;
-    
+    margin-top: 10px;
     display: flex;
     background:rgba(11, 185, 238, 0.973);
+    background: url("../../assets/img/huellas.png"),rgb(11, 185, 238);
+    background-size: 30%;
     border-radius: 10px;
     width: 50vw;
-    height: 92vh;
+    height: 95vh;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.5);
-    padding: 1vh;
+    padding: 0vh;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .card h2{
+    color: whitesmoke;
+    text-shadow: 1px 4px 8px #000;
     margin-top: -60px;
     margin-left: 70px;
     margin-bottom: -15px;
@@ -21,25 +33,29 @@
     height: 10vh;
     margin-left: 500px;
     margin-top: 30px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 .data{
+    color: whitesmoke;
+    text-shadow: 1px 4px 8px #000;
     margin-top: -15px;
     margin-left: 35px;
     padding: 6vh;
     width: 90vh;
 }
 .bi{
-    margin-top: 30px;
+    margin-top: 8px;
     margin-left: 15px;
     font-size: 5vh;
     margin-bottom: -65px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .data p{
     font-size: 17px;
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 .btn{
     margin-top: 25px;
     text-align: center;
@@ -48,4 +64,48 @@
     background-color: rgb(226, 205, 10);
     font-size: 3vh;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mensaje{
+    color: rgb(255, 255, 255);
+    margin-top: -70vh;
+    margin-left: 110vh;
+    text-align: center;
+    width: 100vh;
+}
+.mensaje img{
+    width: 12vh;
+    height: 12vh;
+}
+
+.reservation{
+    color: rgb(255, 255, 255);
+    margin-top: -97vh;
+    margin-left: 110vh;
+    text-align: center;
+    width: 100vh;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.reservation h1{
+    margin-bottom: 5px;
+    font-size: 8vh;
+}
+.reservation h4{
+    margin-top: 25px;
+    font-size: 4vh;
+}
+.reservation img{
+    margin-top: -90px;
+    margin-left: 300px;
+    width: 7vh;
+    height: 7vh;
+}
+.reservation a{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -265px;
+    border: transparent solid;
+}
+.data small{
+    color: rgb(99, 2, 2);  
 }
