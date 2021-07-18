@@ -1,0 +1,36 @@
+<div class="card">
+    <a class="bi bi-arrow-left-circle-fill" href="/"></a>
+    <img src="../../assets/icons/logo.png">
+    <h2>Formulario de Reservación</h2>
+    <form class="data">
+        <div>
+            <p>Nombre Completo</p>
+            <input type="text" class="form-control"  formControlName="name">
+        </div>
+        <div>
+            <p>Tipo de Habitación</p>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el Tipo de Habitación</option>
+                <option value="1">Económica Dalmata-Inn</option>
+                <option value="2">Normal Parke</option>
+                <option value="3">Ejecutiva Honk-Kong</option>
+              </select>
+        </div>
+        <div>
+            <p>Fecha para Reserva</p>
+            <input type="date" class="form-control"  formControlName="date">
+        </div>
+        <div>
+            <p>Hora de Entrada</p>
+            <input type="time" class="form-control"  formControlName="timeE">
+        </div>
+        <div>
+            <p>Hora de Salida</p>
+            <input type="time" class="form-control"  formControlName="timeS">
+        </div>
+        <button class="btn" type="submit">Realizar Reservación</button>
+    </form>
+</div>
+
+
+
