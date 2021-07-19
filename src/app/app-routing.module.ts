@@ -5,7 +5,7 @@ import {ReserveComponent} from './reserve/reserve.component'
 
 const routes: Routes = [
     {path: '', component: LandingpageComponent},
-    {path:'reservacion', component:ReserveComponent},
+    {path:'reservacion', component: ReserveComponent},
     {path: '**', redirectTo: '/'},
 ];
 
