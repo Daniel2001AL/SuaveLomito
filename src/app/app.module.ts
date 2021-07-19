@@ -11,12 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ReserveComponent } from './reserve/reserve.component';
+import { CancelComponent } from './cancel/cancel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
-    ReserveComponent
+    ReserveComponent,
+    CancelComponent
   ],
   imports: [
     BrowserModule,

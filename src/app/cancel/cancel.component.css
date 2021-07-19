@@ -1,0 +1,47 @@
+.all{
+    margin: -10px;
+    margin-top:0px;
+    margin-right: -10px;
+    display: flex;
+    width: 100.75%;
+    height: 100vh;
+    background:rgb(85, 6, 160);
+    background-size: 30%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.card{
+    margin: 25px;
+    margin-left: 200px;
+    margin-top: 40px;
+    
+    background:rgba(2, 187, 243, 0.973);
+    border-radius: 10px;
+    width: 70vw;
+    height: 15vh;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1), 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.card h2{
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.ref{
+    width: 55vh;
+    margin-left:55vh;
+    margin-top: -7vh;
+    position: relative;
+}
+.btn{
+   
+    width: 20vh;
+    background: rgb(255, 238, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px 5px #000;
+    margin-left: 64vh;
+    margin-top: -9.5vh;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1), 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.ref small{
+    position: absolute;
+    color: rgb(99, 2, 2);  
+    width: 20vh;
+}

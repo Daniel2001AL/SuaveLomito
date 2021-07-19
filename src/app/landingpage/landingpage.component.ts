@@ -16,5 +16,8 @@ export class LandingpageComponent implements OnInit {
   click(){
     this.router.navigate(['reservacion'])
   }
+  clickCan(){
+    this.router.navigate(['cancel'])
+  }
 
 }

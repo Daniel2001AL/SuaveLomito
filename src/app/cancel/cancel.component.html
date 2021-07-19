@@ -1,0 +1,12 @@
+<div class="all">
+    <div class="card">
+        <h2>Inserte su Número de Referencia:</h2>
+        <form [formGroup]="refForm" class="ref">
+            <input  type="text" class="form-control"  formControlName = "refer">
+            <small *ngIf="refForm.get('refer').invalid && refForm.get('refer').touched" class="invalid">
+                Favor de Completar el Campo
+            </small>
+            <button class="btn" type="submit" [disabled]="refForm.invalid">Buscar</button>
+        </form>
+    </div>
+</div>
