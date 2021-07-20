@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ServiceService } from '../service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reserve',
@@ -14,7 +16,7 @@ export class ReserveComponent implements OnInit {
   costo = "";
   confirmed = false;
 
-  constructor(private _formBuilder:FormBuilder) { }
+  constructor(private _formBuilder:FormBuilder, private serviceService: ServiceService, private _router: Router) { }
 
   ngOnInit(): void {
     this.reservaForm = this._formBuilder.group({
@@ -25,26 +27,27 @@ export class ReserveComponent implements OnInit {
       timeS: ['', Validators.required]
     })
   }
-  reserva(){
+
+  reserva(nombreCliente,nombreHabitacion,fechaEntrada,horaEntrada,horaSalida){
     this.resume= true;
     this.confirmed=true;
     const data = this.reservaForm.value;
-    const x = parseInt(data.tipo)
-    switch(x){
-      case 1:
-        this.tipe = "Dalmata-Inn";
-        this.costo = "$100.00"
-        break;
-      case 2:
-        this.tipe = "Parke"
-        this.costo = "$300.00"
-        break;
-      case 3:
-        this.tipe = "Honk-Kong"
-        this.costo = "$500.00"
-        break;
+    if (data.tipo == "Dalmata-Inn") {
+      this.tipe = "Dalmata-Inn";
+      this.costo = "$100.00"
+    } else if (data.tipo == "Parke") {
+      this.tipe = "Parke"
+      this.costo = "$300.00"
+    } else {
+      this.tipe = "Honk-Kong"
+      this.costo = "$500.00"
     }
+
+    this.serviceService.addReservacion(nombreCliente, nombreHabitacion, fechaEntrada, horaEntrada, horaSalida).subscribe(access => {
+      console.log("Ta piola")
+    }, error => {
+      console.log(nombreCliente, nombreHabitacion, fechaEntrada, horaEntrada, horaSalida)
+    })
   }
-  
 
 }

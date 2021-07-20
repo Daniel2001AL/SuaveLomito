@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ServiceService } from '../service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cancel',
@@ -10,12 +12,16 @@ export class CancelComponent implements OnInit {
 
   refForm:FormGroup;
 
-  constructor(private _formBuilder:FormBuilder) { }
+  constructor(private _formBuilder:FormBuilder, private serviceService: ServiceService, private _router: Router) { }
 
   ngOnInit(): void {
     this.refForm = this._formBuilder.group({
       refer : ['', Validators.required]
     })
+  }
+
+  cancelar() {
+    
   }
 
 }

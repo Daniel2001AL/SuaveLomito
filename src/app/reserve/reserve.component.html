@@ -6,17 +6,17 @@
         <form [formGroup] = "reservaForm"  class="data ">
             <div>
                 <p >Nombre Completo</p>
-                <input  type="text" class="form-control"  formControlName = "name">
+                <input  type="text" class="form-control" formControlName = "name">
                 <small *ngIf="reservaForm.get('name').invalid && reservaForm.get('name').touched" class="invalid">
                     Favor de completar el campo
                 </small>
             </div>
             <div>
                 <p>Habitación</p>
-                <select class="form-select" aria-label="Default select example"  formControlName = "tipo">
-                    <option value="1">Dalmata-Inn</option>
-                    <option value="2">Parke</option>
-                    <option value="3">Honk-Kong</option>
+                <select class="form-select" aria-label="Default select example" formControlName = "tipo">
+                    <option value="Dalmata-Inn">Dalmata-Inn</option>
+                    <option value="Parke">Parke</option>
+                    <option value="Honk-Kong">Honk-Kong</option>
                   </select>
                   <small *ngIf="reservaForm.get('tipo').invalid && reservaForm.get('tipo').touched" class="invalid">
                     Favor de completar el campo
@@ -43,7 +43,7 @@
                     Favor de completar el campo
                 </small>
             </div>
-            <button class="btn" type="submit" [disabled]="reservaForm.invalid || confirmed" (click)="reserva()">Realizar Reservación</button>
+            <button class="btn" type="submit" [disabled]="reservaForm.invalid || confirmed" (click)="reserva(reservaForm.value.name,reservaForm.value.tipo,reservaForm.value.date,reservaForm.value.timeE,reservaForm.value.timeS)">Realizar Reservación</button>
         </form>
     </div>
     <div class="mensaje" *ngIf="resume === false">
@@ -53,7 +53,6 @@
     <div class="reservation" *ngIf="resume === true">
         <h1>Datos de Reservación</h1>
         <h4>Nombre del Cliente: &nbsp;&nbsp;&nbsp;{{ reservaForm.value.name}} </h4>
-        <h4>Referencia:</h4>
         <h4>Fecha de Reservación:&nbsp;&nbsp;&nbsp;&nbsp;{{ reservaForm.value.date}} </h4>
         <h4>Habitación: &nbsp;&nbsp;&nbsp;{{ tipe }} </h4>
         <h4>Hora de Entrada:&nbsp;&nbsp;&nbsp;&nbsp;{{ reservaForm.value.timeE}} </h4>
@@ -64,10 +63,4 @@
         <img src="..//..//assets/icons/logo.png" alt="">
         <a class="btn btn-primary" href="/" role="button">Finaliza y Volver</a>
     </div>
-    
-    
-    
-    
-    
-    
 </div>
