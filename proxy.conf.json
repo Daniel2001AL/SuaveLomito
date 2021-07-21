@@ -1,0 +1,7 @@
+{
+    "*":{
+        "target":"https://suave-lomito.herokuapp.com/",
+        "secure":false,
+        "logLevel":"debug"
+    }
+}

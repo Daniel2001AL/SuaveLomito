@@ -1,12 +1,21 @@
 <div class="all">
     <div class="card">
-        <h2>Inserte su Número de Referencia:</h2>
+        <h2>Inserte el Nombre de la Reservación:</h2>
         <form [formGroup]="refForm" class="ref">
             <input  type="text" class="form-control"  formControlName = "refer">
             <small *ngIf="refForm.get('refer').invalid && refForm.get('refer').touched" class="invalid">
                 Favor de Completar el Campo
             </small>
-            <button class="btn" type="submit" [disabled]="refForm.invalid">Buscar</button>
+            <button class="btn" type="submit" [disabled]="refForm.invalid" (click)="delete()">Buscar</button>
         </form>
+    </div>
+    <div class="data">
+        <!-- <h1>Datos de Reservación</h1>
+        <h4>Nombre del Cliente: &nbsp;&nbsp;&nbsp;{{ reservaForm.value.name}} </h4> -->
+        <!-- <h4>Fecha de Reservación:&nbsp;&nbsp;&nbsp;&nbsp;{{tipe}} </h4> -->
+        <!-- <h4>Habitación: &nbsp;&nbsp;&nbsp;{{ tipe }} </h4>
+        <h4>Hora de Entrada:&nbsp;&nbsp;&nbsp;&nbsp;{{ reservaForm.value.timeE}} </h4>
+        <h4>Hora de Salida: &nbsp;&nbsp;&nbsp;&nbsp;{{ reservaForm.value.timeS}}</h4>
+        <h4>Importe a Pagar: &nbsp;&nbsp;&nbsp;&nbsp;{{costo}} </h4> -->
     </div>
 </div>

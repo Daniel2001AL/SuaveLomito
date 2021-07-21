@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+
+import { ServicesService } from '../services/services.service';
+
 @Component({
   selector: 'app-reserve',
   templateUrl: './reserve.component.html',
@@ -14,7 +17,7 @@ export class ReserveComponent implements OnInit {
   costo = "";
   confirmed = false;
 
-  constructor(private _formBuilder:FormBuilder) { }
+  constructor(private _formBuilder:FormBuilder, private services:ServicesService) { }
 
   ngOnInit(): void {
     this.reservaForm = this._formBuilder.group({
@@ -44,6 +47,9 @@ export class ReserveComponent implements OnInit {
         this.costo = "$500.00"
         break;
     }
+    this.services.reserva(data.name,this.tipe, data.date, data.timeE, data.timeS, this.costo).subscribe(access=>{
+      console.log('ok')
+    });
   }
   
 

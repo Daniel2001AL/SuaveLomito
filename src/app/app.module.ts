@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,9 +23,10 @@ import { CancelComponent } from './cancel/cancel.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
